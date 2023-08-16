@@ -21,12 +21,15 @@ createGallery();
 function zoomItem(event) {
   event.preventDefault();
   for (const item of galleryItems) {
-    if (event.target.getAttribute("src") === item.preview) {
-      const instance = basicLightbox.create(`
-            <img src="${item.original}" width="800" height="600">
-        `);
-      instance.show();
+    if (event.target.getAttribute("src") === item.preview) 
+      {
+      //   const instance = basicLightbox.create(`
+      //       <img src="${item.original}" width="800" height="600">
+      //   `);
+      // instance.show();
+      console.log(event.target.getAttribute("src"));
+      console.log(item.preview);
     }
-    instance.close();
+    // instance.close();
   }
 }
