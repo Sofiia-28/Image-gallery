@@ -29,16 +29,3 @@ function zoomItem(event) {
     }
   });
 }
-//     // instance.show();)
-// for (const item of galleryItems) {
-//   if (event.target.getAttribute("src") === item.preview)
-//     {
-//     //   const instance = basicLightbox.create(`
-//     //       <img src="${item.original}" width="800" height="600">
-//     //   `);
-//     // instance.show();
-//     console.log(event.target.getAttribute("src"));
-//     console.log(item.preview);
-//   }
-//   // instance.close();
-// }
