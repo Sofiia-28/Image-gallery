@@ -13,23 +13,19 @@ function createGallery() {
     )
     .join("");
   ulEl.insertAdjacentHTML("beforeend", markupLiEl);
-
-  ulEl.addEventListener("click", zoomItem);
 }
 createGallery();
 
+ulEl.addEventListener("click", zoomItem);
+
 function zoomItem(event) {
   event.preventDefault();
-  for (const item of galleryItems) {
-    if (event.target.getAttribute("src") === item.preview) 
-      {
-      //   const instance = basicLightbox.create(`
-      //       <img src="${item.original}" width="800" height="600">
-      //   `);
-      // instance.show();
-      console.log(event.target.getAttribute("src"));
-      console.log(item.preview);
+  galleryItems.find((item) => {
+    if (item.preview === event.target.getAttribute("src")) {
+      const instance = basicLightbox.create(`
+    <img src="${item.original}" width="800" height="600">
+  `);
+  instance.show();
     }
-    // instance.close();
-  }
+  });
 }
